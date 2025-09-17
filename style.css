@@ -1,0 +1,220 @@
+/* Reset default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: 'Arial', sans-serif; 
+  background-color: white; 
+}
+
+/* Hero Section */
+.hero-top {
+  height: 60vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(to bottom, #fffaf0, #f0ffff);
+  text-align: center;
+}
+
+/* Top-left iShots text */
+.top-left-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px 10px;
+  font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 20px;
+  z-index: 1000;
+}
+
+/* Logo at top-right */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: auto;
+}
+
+/* Main Heading */
+.hero-top h2 {
+  font-size: 3rem;
+  font-family:'Times New Roman', Times, serif;
+  background: linear-gradient(50deg, #45171d, #e84a5f,#ff847c,#fecea8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 1s ease;
+  margin-bottom: 20px;
+}
+
+/* Supporting Text with Gradient */
+.hero-top .tagline {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 1s ease;
+}
+
+.hero-top .subtagline {
+  font-size: 2rem;
+  font-weight: lighter;
+  font-family: cursive;
+  padding-top: 15px;
+  background: linear-gradient(90deg, #28331f, #242e18, #eaf0aa, #29162f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 1s ease;
+}
+
+/* Black line */
+.black-line {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+/* Content below hero */
+.content {
+  padding: 40px;
+  text-align: center;
+  overflow-y: visible;
+}
+
+/* Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow: row;
+}
+
+/* Photo card */
+.photo-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 250px;
+  width: 100%;
+}
+
+/* Image fills the card */
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Download button overlay */
+.photo-actions {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.photo-card:hover .photo-actions {
+  opacity: 1;
+}
+
+.photo-actions a {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Lightbox arrows */
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 50px;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.lightbox .prev { left: 20px; }
+.lightbox .next { right: 20px; }
+
+.lightbox .prev:hover,
+.lightbox .next:hover { color: #f1f1f1; }
+
+/* About & Contact sections */
+.about,
+.contact {
+  padding: 50px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.about h2,
+.contact h2 {
+  margin-bottom: 20px;
+  color: #5b446a;
+}
+
+/* Responsive Gallery */
+@media (min-width: 600px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) {
+  .gallery { grid-template-columns: repeat(4, 1fr); }
+}
