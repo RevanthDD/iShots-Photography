@@ -1,15 +1,15 @@
 // Array of photo paths (placeholders to avoid 404)
 const photos = [
-  'https://picsum.photos/seed/1/600/400',
-  'https://picsum.photos/seed/2/600/400',
-  'https://picsum.photos/seed/3/600/400',
-  'https://picsum.photos/seed/4/600/400',
-  'https://picsum.photos/seed/5/600/400',
-  'https://picsum.photos/seed/6/600/400',
-  'https://picsum.photos/seed/7/600/400',
-  'https://picsum.photos/seed/8/600/400',
-  'https://picsum.photos/seed/9/600/400',
-  'https://picsum.photos/seed/10/600/400'
+  'photos/photo1.jpg',
+  'photos/photo2.jpg',
+  'photos/photo3.jpg',
+  'photos/photo4.jpg',
+  'photos/photo5.jpg',
+  'photos/photo6.jpg',
+  'photos/photo7.jpg',
+  'photos/photo8.jpg',
+  'photos/photo9.jpg',
+  'photos/photo10.jpg'
 ];
 
 // Select gallery container
